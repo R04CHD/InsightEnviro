@@ -1,0 +1,24 @@
+{
+  "title": "EPA Waste Classification",
+  "type": "page",
+  "version": "0.4",
+  "content":[
+    {
+      "id":"hero",
+      "elType":"section",
+      "settings":{"background_color":"#1b5e4b","padding":{"top":"120","bottom":"120"}},
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Waste Classification Services"}},{"widgetType":"text-editor","settings":{"editor":"Accurate EPA-compliant waste classification reports for soil and excavation materials across Melbourne and Victoria."}},{"widgetType":"button","settings":{"text":"Request Waste Classification","link":{"url":"/contact"}}}]}]
+    },
+    {
+      "id":"services",
+      "elType":"section",
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Classification Services"}},{"widgetType":"text-editor","settings":{"editor":"<ul><li>EPA Waste Code reporting</li><li>Excavation material classification</li><li>Soil reuse compliance</li><li>On-site consulting and advice</li></ul>"}}]}]
+    },
+    {
+      "id":"cta",
+      "elType":"section",
+      "settings":{"background_color":"#e8f5e9"},
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Compliant Waste Classification"}},{"widgetType":"button","settings":{"text":"Get Quote","link":{"url":"/contact"}}}]}]
+    }
+  ]
+}

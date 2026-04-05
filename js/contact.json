@@ -1,0 +1,18 @@
+{
+  "title": "Contact Insight Environmental",
+  "type": "page",
+  "version": "0.4",
+  "content":[
+    {
+      "id":"hero",
+      "elType":"section",
+      "settings":{"background_color":"#1b5e4b","padding":{"top":"120","bottom":"120"}},
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Get In Touch"}},{"widgetType":"text-editor","settings":{"editor":"Submit your project details and receive a quote within 24 hours."}},{"widgetType":"button","settings":{"text":"Submit Quote","link":{"url":"#quote-form"}}}]}]
+    },
+    {
+      "id":"form",
+      "elType":"section",
+      "elements":[{"elType":"column","elements":[{"widgetType":"form","settings":{"form_name":"quote-form","fields":[{"type":"text","name":"name","placeholder":"Your Name"},{"type":"email","name":"email","placeholder":"Email"},{"type":"tel","name":"phone","placeholder":"Phone"},{"type":"textarea","name":"details","placeholder":"Project Details"}],"submit_text":"Submit Quote","netlify":"true"}}]}]
+    }
+  ]
+}

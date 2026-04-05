@@ -1,0 +1,18 @@
+{
+  "title": "About Insight Environmental",
+  "type": "page",
+  "version": "0.4",
+  "content":[
+    {
+      "id":"hero",
+      "elType":"section",
+      "settings":{"background_color":"#1b5e4b","padding":{"top":"120","bottom":"120"}},
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"About Insight Environmental Services"}},{"widgetType":"text-editor","settings":{"editor":"Providing trusted soil testing, waste classification, and environmental reporting services across Victoria. Our team is NATA accredited and EPA compliant."}}]}]
+    },
+    {
+      "id":"team",
+      "elType":"section",
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Meet Our Team"}},{"widgetType":"text-editor","settings":{"editor":"<ul><li>Senior Environmental Consultant: John Doe</li><li>Lab Coordinator: Jane Smith</li><li>Project Manager: Mark Lee</li></ul>"}}]}]
+    }
+  ]
+}

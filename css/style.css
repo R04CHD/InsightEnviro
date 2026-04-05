@@ -1,0 +1,352 @@
+/* --- 1. Global Variables & Resets --- */
+:root {
+    --primary-color: #2ecc71;    /* Environmental Green */
+    --primary-hover: #27ae60;
+    --secondary-color: #2c3e50;  /* Deep Navy/Charcoal */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --bg-light: #f4f7f6;
+    --accent-gray: #e0e0e0;
+    --error-red: #e74c3c;
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- 2. Typography --- */
+h1, h2, h3, h4 {
+    color: var(--secondary-color);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 span { color: var(--primary-color); }
+
+/* --- 3. Header & Navigation --- */
+header {
+    background: var(--text-light);
+    box-shadow: var(--shadow);
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+}
+
+.header-logo {
+    width: 160px;
+    height: 53px;
+    object-fit: contain;
+    display: block;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.logo span { color: var(--primary-color); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+/* Hamburger Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 5px;
+    padding: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+/* --- 4. Buttons --- */
+.btn-primary {
+    background: var(--primary-color);
+    color: white !important;
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--text-light);
+    color: var(--text-light);
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-outline:hover {
+    background: var(--text-light);
+    color: var(--secondary-color);
+}
+
+/* --- 5. Hero Section (Dynamic Image Setup) --- */
+.hero {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: var(--text-light);
+}
+
+.hero-parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Image path is defined in HTML style="background-image: url(...)" */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Parallax effect */
+    z-index: -2;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Dark gradient for text legibility */
+    background: linear-gradient(to right, rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.4));
+    z-index: -1;
+}
+
+.hero-content {
+    max-width: 700px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2rem;
+}
+/* Added these styles for the new profile picture layouts */
+.consultant-img-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--accent-gray);
+    color: var(--secondary-color);
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--accent-gray);
+}
+/* --- 6. Footer & Branding Alignment --- */
+.main-footer {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 60px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
+}
+
+.footer-col h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+		
+}
+
+.footer-legal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.footer-logo-img {
+    height: 30px;
+    width: auto;
+    opacity: 0.8;
+}
+/* --- Footer Link Styling --- */
+
+/* 1. Set default state to white */
+.footer-col a, 
+.footer-links li a {
+    color: var(--text-light) !important; /* Forces white */
+    text-decoration: none;
+    transition: var(--transition);
+    opacity: 0.85; /* Slightly muted for a professional look */
+}
+
+/* 2. Hover, Active (Click), and Visited States */
+.footer-col a:hover,
+.footer-col a:active,
+.footer-col a:visited,
+.footer-links li a:hover,
+.footer-links li a:active,
+.footer-links li a:visited {
+    color: var(--primary-color) !important; /* #2ecc71 */
+    opacity: 1;
+}
+
+/* Optional: Add a small underline on hover for better UX */
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+/* --- 7. Responsive Design --- */
+@media (max-width: 1100px) {
+    .menu-toggle { display: flex; z-index: 1001; }
+    
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        padding: 2.5rem;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        gap: 20px;
+    }
+
+    .nav-links.active { right: 0; }
+
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
+
+@media (max-width: 768px) {
+    .hero { min-height: 60vh; text-align: center; }
+    .hero-content { margin: 0 auto; }
+    .cta-group { justify-content: center; flex-direction: column; }
+    
+    /* Disable fixed background on mobile for performance/scrolling issues */
+    .hero-parallax { background-attachment: scroll; }
+    
+    .footer-legal { flex-direction: column; gap: 10px; }
+}
+
+@media (max-width: 480px) {
+    .header-logo { width: 120px; height: auto; }
+    .logo { font-size: 1.1rem; }
+}
+
+/* --- 8. Animations --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}

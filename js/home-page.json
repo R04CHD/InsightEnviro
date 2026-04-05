@@ -1,0 +1,69 @@
+{
+  "title": "Insight Enviro - Home",
+  "type": "page",
+  "version": "0.4",
+  "content": [
+    {
+      "id": "hero",
+      "elType": "section",
+      "settings": {
+        "background_color": "#1b5e4b",
+        "padding": {"top":"120","bottom":"120"}
+      },
+      "elements": [
+        {
+          "id": "hero-col",
+          "elType": "column",
+          "elements": [
+            {
+              "id": "hero-title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {"title":"Soil Testing & Waste Classification Experts in Melbourne","size":"xxl"}
+            },
+            {
+              "id": "hero-text",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {"editor":"Rapid, EPA-compliant environmental reporting for construction, development, and infrastructure projects across Victoria."}
+            },
+            {
+              "id": "hero-cta",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {"text":"Request Quote","link":{"url":"/contact"}}
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "elType": "section",
+      "elements": [
+        {
+          "elType": "column",
+          "elements": [
+            {"widgetType":"heading","settings":{"title":"Our Services"}},
+            {"widgetType":"text-editor","settings":{"editor":"<div class='services-grid'><div class='service-card'><h3>Soil Testing</h3><p>Comprehensive soil contamination analysis.</p></div><div class='service-card'><h3>Waste Classification</h3><p>EPA-aligned waste code reporting.</p></div><div class='service-card'><h3>Site Investigations</h3><p>Environmental site assessments for construction and development.</p></div><div class='service-card'><h3>PFAS Testing</h3><p>Specialist PFAS soil contamination testing.</p></div></div>"}}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "elType": "section",
+      "elements":[
+        {"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Our Process"}},{"widgetType":"text-editor","settings":{"editor":"<div class='process-grid'><div class='step'><h3>1. Project Consultation</h3><p>Discuss site conditions and testing requirements.</p></div><div class='step'><h3>2. Soil Sampling</h3><p>Samples collected following EPA and IWRG guidelines.</p></div><div class='step'><h3>3. Laboratory Analysis</h3><p>NATA accredited laboratory testing.</p></div><div class='step'><h3>4. Compliance Reporting</h3><p>Environmental classification report delivered.</p></div></div>"}}]}
+      ]
+    },
+    {
+      "id":"cta",
+      "elType":"section",
+      "settings":{"background_color":"#e8f5e9"},
+      "elements":[
+        {"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Request Your Environmental Report Today"}},{"widgetType":"button","settings":{"text":"Get Quote","link":{"url":"/contact"}}}]}
+      ]
+    }
+  ]
+}

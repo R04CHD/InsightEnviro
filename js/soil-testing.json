@@ -1,0 +1,24 @@
+{
+  "title": "Soil Testing Melbourne",
+  "type": "page",
+  "version": "0.4",
+  "content":[
+    {
+      "id":"hero",
+      "elType":"section",
+      "settings":{"background_color":"#1b5e4b","padding":{"top":"120","bottom":"120"}},
+      "elements":[{"id":"col","elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Professional Soil Testing in Melbourne"}},{"widgetType":"text-editor","settings":{"editor":"Comprehensive soil testing for contamination, construction compliance, and property development projects."}},{"widgetType":"button","settings":{"text":"Request Soil Testing","link":{"url":"/contact"}}}]}]
+    },
+    {
+      "id":"services",
+      "elType":"section",
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Soil Testing Services"}},{"widgetType":"text-editor","settings":{"editor":"<ul><li>Contamination analysis</li><li>Construction site soil classification</li><li>PFAS and heavy metal testing</li><li>EPA and IWRG702 compliant sampling</li></ul>"}}]}]
+    },
+    {
+      "id":"cta",
+      "elType":"section",
+      "settings":{"background_color":"#e8f5e9"},
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Need a Soil Report?"}},{"widgetType":"button","settings":{"text":"Get Quote","link":{"url":"/contact"}}}]}]
+    }
+  ]
+}

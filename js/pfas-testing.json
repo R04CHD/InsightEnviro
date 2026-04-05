@@ -1,0 +1,18 @@
+{
+  "title": "PFAS Soil Testing",
+  "type": "page",
+  "version": "0.4",
+  "content":[
+    {
+      "id":"hero",
+      "elType":"section",
+      "settings":{"background_color":"#1b5e4b","padding":{"top":"120","bottom":"120"}},
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"PFAS Soil Testing Melbourne"}},{"widgetType":"text-editor","settings":{"editor":"Specialist PFAS soil testing and contamination analysis for construction, property, and industrial sites."}},{"widgetType":"button","settings":{"text":"Request PFAS Testing","link":{"url":"/contact"}}}]}]
+    },
+    {
+      "id":"services",
+      "elType":"section",
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"PFAS Testing Services"}},{"widgetType":"text-editor","settings":{"editor":"<ul><li>PFAS soil contamination analysis</li><li>EPA-compliant reporting</li><li>Sampling following strict safety protocols</li><li>Detailed laboratory results</li></ul>"}}]}]
+    }
+  ]
+}

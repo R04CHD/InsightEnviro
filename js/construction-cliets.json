@@ -1,0 +1,18 @@
+{
+  "title": "Construction Clients",
+  "type": "page",
+  "version": "0.4",
+  "content":[
+    {
+      "id":"hero",
+      "elType":"section",
+      "settings":{"background_color":"#1b5e4b","padding":{"top":"120","bottom":"120"}},
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Environmental Services for Construction Projects"}},{"widgetType":"text-editor","settings":{"editor":"Targeted soil testing, site investigations, and waste classification for construction projects across Melbourne and Victoria."}},{"widgetType":"button","settings":{"text":"Request Construction Services","link":{"url":"/contact"}}}]}]
+    },
+    {
+      "id":"services",
+      "elType":"section",
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Construction-Focused Services"}},{"widgetType":"text-editor","settings":{"editor":"<ul><li>On-site soil testing</li><li>Excavation waste classification</li><li>Compliance and reporting</li><li>Consulting for construction managers</li></ul>"}}]}]
+    }
+  ]
+}

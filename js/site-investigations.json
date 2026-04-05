@@ -1,0 +1,18 @@
+{
+  "title": "Site Investigations",
+  "type": "page",
+  "version": "0.4",
+  "content":[
+    {
+      "id":"hero",
+      "elType":"section",
+      "settings":{"background_color":"#1b5e4b","padding":{"top":"120","bottom":"120"}},
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Environmental Site Investigations"}},{"widgetType":"text-editor","settings":{"editor":"Detailed assessments identifying soil contamination, site hazards, and compliance risks for construction and property development."}},{"widgetType":"button","settings":{"text":"Request Site Investigation","link":{"url":"/contact"}}}]}]
+    },
+    {
+      "id":"services",
+      "elType":"section",
+      "elements":[{"elType":"column","elements":[{"widgetType":"heading","settings":{"title":"Investigation Services"}},{"widgetType":"text-editor","settings":{"editor":"<ul><li>Soil & groundwater assessment</li><li>Contamination identification</li><li>Site compliance audits</li><li>Environmental reporting</li></ul>"}}]}]
+    }
+  ]
+}

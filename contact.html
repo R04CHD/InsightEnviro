@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote | Insight Environmental Melbourne</title>
+    <link rel="icon" type="image/png" sizes="16x15" href="img/Favicon-16x15.png">
+    <link rel="stylesheet" href="css/style.css">
+    
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Service",
+  "serviceType": "Soil Testing & Waste Classification",
+  "description": "Professional soil analysis and waste classification in accordance with AS4482 and EPA Victoria guidelines.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Insight Environmental"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Environmental Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Clean Fill Certification"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Contaminated Land Assessment"
+        }
+      }
+    ]
+  }
+}
+</script>
+	
+    <style>
+        .form-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: var(--shadow); }
+        .form-step { display: none; }
+        .form-step.active { display: block; animation: fadeIn 0.5s ease; }
+        .progress-container { background: #eee; height: 8px; border-radius: 4px; margin-bottom: 30px; overflow: hidden; }
+        .progress-bar-fill { background: var(--primary-color); height: 100%; width: 33%; transition: width 0.4s ease; }
+        .step-header { margin-bottom: 25px; border-bottom: 1px solid var(--accent-gray); padding-bottom: 10px; }
+        .input-group { margin-bottom: 20px; }
+        label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--secondary-color); }
+        input, select, textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; }
+        input.error { border-color: #e74c3c; background-color: #fdf2f2; }
+        .btn-group { display: flex; gap: 15px; margin-top: 30px; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="container">
+        <div class="logo-wrapper">
+            <a href="index.html" class="logo-link">
+                <img src="img/MobileRectangleLogo160x53.png" alt="Insight Environmental Logo" class="header-logo">
+            </a>
+        </div>
+
+        <button class="menu-toggle" aria-label="Toggle navigation" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="soil-testing.html">Soil Testing</a></li>
+            <li><a href="waste-classification.html">Waste Classification</a></li>
+            <li><a href="site-investigation.html">Site Investigation</a></li>
+            <li><a href="pfas-testing.html">PFAS Testing</a></li>
+            <li><a href="construction-clients.html">Construction</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html" class="btn-primary">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <main>
+        <section class="hero-sub">
+            <div class="container">
+                <h1>Request a <span>Technical Quote</span></h1>
+                <p>Provide your site details below for a rapid-turnaround environmental assessment.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="form-container">
+                <div class="progress-container">
+                    <div class="progress-bar-fill"></div>
+                </div>
+
+                <form id="questionnaire-form">
+                    
+                    <div class="form-step active">
+                        <div class="step-header">
+                            <h2>Step 1: Contact Information</h2>
+                            <p>Tell us who to send the report to.</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="john@company.com.au" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="0400 000 000" required>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn-next btn-primary">Next: Site Details</button>
+                        </div>
+                    </div>
+
+                    <div class="form-step">
+                        <div class="step-header">
+                            <h2>Step 2: Site Location & Service</h2>
+                            <p>Where is the project located?</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="address">Site Address (Victoria) *</label>
+                            <input type="text" id="address" name="address" placeholder="123 Example St, Melbourne" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="service">Primary Service Needed *</label>
+                            <select id="service" name="service" required>
+                                <option value="">-- Select a Service --</option>
+                                <option value="soil">Soil Testing (AS4482)</option>
+                                <option value="waste">Waste Classification</option>
+                                <option value="pfas">PFAS Testing</option>
+                                <option value="asbestos">Asbestos Survey</option>
+                                <option value="other">General Site Investigation</option>
+                            </select>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn-prev btn-outline">Back</button>
+                            <button type="button" class="btn-next btn-primary">Next: Requirements</button>
+                        </div>
+                    </div>
+
+                    <div class="form-step">
+                        <div class="step-header">
+                            <h2>Step 3: Project Specifics</h2>
+                            <p>Any additional details or deadlines?</p>
+                        </div>
+                        <div class="input-group">
+                            <label for="details">Scope of Works</label>
+                            <textarea id="details" name="details" rows="5" placeholder="e.g. Planning permit requirement, known history of the site..."></textarea>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn-prev btn-outline">Back</button>
+                            <button type="submit" class="btn-primary">Submit Quote Request</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="container text-center" style="margin-bottom: 60px;">
+            <p>Prefer to speak with a consultant? <br>
+            <strong>Call: <a href="tel:0447149682">0447 149 682</a></strong> | <strong>Email: <a href="mailto:admin@insightenviro.com.au">admin@insightenviro.com.au</a></strong></p>
+        </section>
+    </main>
+	<footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <h3>Servicing Areas</h3>
+            <p class="area-list">
+                Altona, Point Cook, Williamstown, Footscray, Brunswick, Kew, Doncaster, 
+                Hawthorn, South Yarra, St. Kilda, Burwood, Glen Waverley, Brighton, 
+                Hampton, Cheltenham, Springvale, Keysborough, Berwick, Clyde, 
+                and surrounding suburbs.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Hours of Operation</h3>
+            <p>Monday - Friday: 8AM - 4PM</p>
+            <p>Saturday: 8AM - 4PM</p>
+            <p>Sunday: Closed</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <p>Phone: <a href="tel:0447149682">0447 149 682</a></p>
+            <p>Email: <a href="mailto:admin@insightenviro.com.au">admin@insightenviro.com.au</a></p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="soil-testing.html">Soil Testing</a></li>
+                <li><a href="pfas-testing.html">PFAS Testing</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact / Quote</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<div class="footer-bottom">
+    <div class="container footer-legal" style="display: flex; align-items: center; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        <p>&copy; <script>document.write( new Date().getUTCFullYear() );</script> Insight Environmental Services. All Rights Reserved.</p>
+        <img src="img/Mobile-SquareLogo-60x56.png" alt="Insight Square Logo" style="height: 30px; width: auto; opacity: 0.8;">
+    </div>
+</div>
+</footer>
+
+    <script src="js/main1.js"></script>
+</body>
+</html>
