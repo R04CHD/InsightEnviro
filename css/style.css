@@ -123,6 +123,7 @@ nav.container {
     background: rgba(255, 255, 255, 0.95); /* Semi-transparent */
     backdrop-filter: blur(10px); /* Blur the background content */
     -webkit-backdrop-filter: blur(10px);
+}
 	
 /* Hamburger Toggle */
 .menu-toggle {
