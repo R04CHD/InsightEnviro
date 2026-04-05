@@ -357,36 +357,6 @@ nav.container {
     
     .footer-legal { flex-direction: column; gap: 10px; }
 
-@media (max-width: 768px) {
-    .nav-links {
-     /* Position it fixed so it stays relative to the screen, not the header */
-        position: fixed;
-        right: -100%; /* Start off-screen */
-        top: 0;
-        width: 70%; /* Adjust width as needed */
-        height: 100vh;
-        background-color: #ffffff; /* Or your preferred theme color */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding-top: 80px; /* Space for the logo/toggle */
-        transition: 0.3s ease-in-out;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-        z-index: 999;
-    }
-
-    /* When the 'active' class is added via JS */
-    .nav-links.active {
-        right: 0; /* Slide into view */
-    }
-
-    /* Ensure the toggle button stays on top of the menu */
-    .menu-toggle {
-        z-index: 1000;
-        position: relative;
-    }
-}
 }
 
 @media (max-width: 480px) {
