@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
             menuToggle.classList.toggle('is-active');
         });
 
-        // Close menu when a link is clicked
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Header Scroll Effect for better UI
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.style.padding = '0.5rem 0';
@@ -43,18 +41,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentStep = 0;
 
-    // Update UI State
     const updateFormSteps = () => {
         steps.forEach((step, index) => {
             step.classList.toggle('active', index === currentStep);
         });
         
-        // Update Progress Bar %
         const progressPercent = ((currentStep + 1) / steps.length) * 100;
         if (progress) progress.style.width = `${progressPercent}%`;
     };
 
-    // Validation Logic
     const validateStep = () => {
         const activeStep = steps[currentStep];
         const inputs = activeStep.querySelectorAll('input[required], select[required], textarea[required]');
@@ -71,13 +66,11 @@ document.addEventListener('DOMContentLoaded', () => {
         return isValid;
     };
 
-    // Navigation Events
     nextBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             if (validateStep()) {
                 currentStep++;
                 updateFormSteps();
-                // Smooth scroll back to form top for better UX on mobile
                 form.scrollIntoView({ behavior: 'smooth' }); 
             } else {
                 alert("Please fill in all required fields to proceed.");
@@ -94,28 +87,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // --- 3. Final Submission with Honeypot Security ---
-    form?.addEventListener('submit', (e) => {
+    // --- 3. Final Submission with Formspree & Honeypot ---
+    form?.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Honeypot Check: If this field is filled, it's a bot
+        // Honeypot Check
         const hpValue = document.querySelector('#last_name_verification')?.value;
         if (hpValue && hpValue !== "") {
-            console.warn("Spam Bot Detected. Silencing submission.");
-            
-            // Show fake success message to the bot so it doesn't try again
+            console.warn("Spam Bot Detected.");
             showSuccessUI();
             return;
         }
         
-        // Human confirmed: Process Form Data
+        // Prepare data for Formspree
         const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
 
-        // Integration Point: Send 'data' to CRM/Email service here
-        console.log("Submitting to Insight Enviro CRM:", data);
-        
-        showSuccessUI();
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Success: Formspree accepted the data
+                console.log("Submission successful.");
+                showSuccessUI();
+            } else {
+                // Error: Formspree returned an error
+                const errorData = await response.json();
+                console.error("Formspree Error:", errorData);
+                alert("There was a problem with your submission. Please try again or contact us directly.");
+            }
+        } catch (error) {
+            // Network or Fetch error
+            console.error("Submission failed:", error);
+            alert("Network error. Please check your connection and try again.");
+        }
     });
 
     // Helper to display success state
