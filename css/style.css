@@ -350,7 +350,7 @@ nav.container {
 }
 
 @media (max-width: 768px) {
-    .hero { min-height: 60vh; text-align: center; }
+    .hero { min-height: 75vh; text-align: center; }
     .hero-content { margin: 0 auto; }
     .cta-group { justify-content: center; flex-direction: column; }
     
