@@ -118,13 +118,15 @@ nav.container {
     color: var(--primary-color);
 }
 
-.nav-links.active {
-    right: 0;
-    background: rgba(255, 255, 255, 0.95); /* Semi-transparent */
-    backdrop-filter: blur(10px); /* Blur the background content */
-    -webkit-backdrop-filter: blur(10px);
+.tier-1-box {
+    background: var(--secondary-color);
+    color: white;
+    margin-top: 60px;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
 }
-	
+
 /* Hamburger Toggle */
 .menu-toggle {
     display: none;
@@ -356,7 +358,6 @@ nav.container {
     .hero-parallax { background-attachment: scroll; }
     
     .footer-legal { flex-direction: column; gap: 10px; }
-
 }
 
 @media (max-width: 480px) {
