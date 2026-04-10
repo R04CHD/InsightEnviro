@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott | Insight Environmental Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Specific Styles for Digital Business Card */
+        .vcard-body {
+            background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .vcard-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 400px;
+            padding: 40px 25px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .vcard-profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-color);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        .vcard-name {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        .vcard-title {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        .vcard-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .vcard-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .vcard-btn:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        .vcard-btn.main {
+            background: var(--primary-color);
+        }
+        .vcard-footer-logo {
+            margin-top: 30px;
+            width: 120px;
+            opacity: .75;
+        }
+    </style>
+</head>
+<body class="vcard-body">
 
+    <div class="vcard-container">
+        <img src="img/logo-white.png" alt="Insight Environmental Services" class="vcard-footer-logo" style="margin-bottom: 20px; margin-top: 0;">
+        
+        <img src="img\Scott-Beith-Co-Founder-Environmental-Scientist-Profile.webp" alt="Scott" class="vcard-profile-img">
+        
+        <h1 class="vcard-name">Scott Beith</h1>
+        <p class="vcard-title">Senior Environmental Consultant</p>
+
+        <div class="vcard-links">
+            <a href="assets/scott-insight.vcf" class="vcard-btn main" download>
+                <span>📥</span> Save Contact to Phone
+            </a>
+
+            <a href="tel:0447149682" class="vcard-btn">
+                <span>📞</span> Call: 0447 149 682
+            </a>
+
+            <a href="mailto:scott@insightenviro.com.au" class="vcard-btn">
+                <span>✉️</span> Email Scott
+            </a>
+
+            <a href="https://insightenviro.com.au" class="vcard-btn">
+                <span>🌐</span> Visit Website
+            </a>
+        </div>
+
+        <p style="color: rgba(255,255,255,0.5); font-size: 0.8rem; margin-top: 30px;">
+            15+ Years Experience in Soil & Waste Code Classification
+        </p>
+    </div>
+
+</body>
+</html>
